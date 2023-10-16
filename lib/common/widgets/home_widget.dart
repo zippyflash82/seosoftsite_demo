@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_plus/flutter_plus.dart';
 import 'package:flutter_svg/svg.dart';
@@ -29,7 +28,7 @@ class _HomeWidgetState extends State<HomeWidget> {
             radius: RadiusPlus.only(topLeft: 50, topRight: 50),
             width: Get.width,
             height: Get.height * 0.75,
-            color: Colors.white,
+            color: Theme.of(context).cardColor,
             child: SingleChildScrollView(
               child: Column(
                 children: [
@@ -61,9 +60,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                       child: const Text(
                         "Rainbow Sandwich Sugarless",
                         style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 27,
-                            fontWeight: FontWeight.bold),
+                            fontSize: 27, fontWeight: FontWeight.bold),
                       )),
                   const SizedBox(
                     height: 20,
@@ -82,9 +79,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                           ),
                           Text(
                             '19 Km',
-                            style: TextStyle(
-                                color: const Color(0xff3B3B3B).withOpacity(0.3),
-                                fontSize: 16),
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodySmall
+                                ?.copyWith(fontSize: 14),
                           ),
                           const SizedBox(
                             width: 20,
@@ -95,9 +93,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                           ),
                           Text(
                             '4,8 Rating',
-                            style: TextStyle(
-                                color: const Color(0xff3B3B3B).withOpacity(0.3),
-                                fontSize: 16),
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodySmall
+                                ?.copyWith(fontSize: 14),
                           ),
                         ],
                       ),
@@ -135,15 +134,15 @@ class _HomeWidgetState extends State<HomeWidget> {
                   ContainerPlus(
                     margin: const EdgeInsets.symmetric(horizontal: 20),
                     alignment: Alignment.topLeft,
-                    child: const Text(
+                    child: Text(
                       "Testimonials",
-                      style: TextStyle(
-                          color: Color(0xff09051C),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15),
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodyMedium
+                          ?.copyWith(fontWeight: FontWeight.bold, fontSize: 15),
                     ),
                   ),
-                  // Can Be replaced With ListView 
+                  // Can Be replaced With ListView
                   const SizedBox(
                     height: 20,
                   ),
@@ -188,7 +187,3 @@ class _HomeWidgetState extends State<HomeWidget> {
     );
   }
 }
-
-
-
-

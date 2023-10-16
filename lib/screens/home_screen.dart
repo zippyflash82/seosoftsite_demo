@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:seosoftsite_demo/common/constants.dart';
-
 import '../common/widgets/home_widget.dart';
 import '../common/widgets/nav_drawer.dart';
 
@@ -18,7 +17,6 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text('SeosoftSite Demo'),
-        backgroundColor: Colors.blue,
       ),
       drawer: const NavDrawer(),
       body: const HomeWidget(),

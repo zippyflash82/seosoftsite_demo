@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class NavDrawer extends StatefulWidget {
   const NavDrawer({super.key});
@@ -9,6 +10,12 @@ class NavDrawer extends StatefulWidget {
 
 class _NavDrawerState extends State<NavDrawer> {
   var isDark = false;
+
+@override
+  void initState() {
+    isDark = Get.isDarkMode;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +42,7 @@ class _NavDrawerState extends State<NavDrawer> {
                 setState(() {
                   isDark = value;
                 });
+              Get.changeTheme(isDark ? ThemeData.dark(): ThemeData.light());  
               },
               activeColor: Colors.green,
             ),

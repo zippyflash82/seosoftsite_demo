@@ -25,18 +25,16 @@ class TestimonialWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                 Text(
                   "Dianne Russell",
-                  style: TextStyle(
-                      color: Color(0xff09051C),
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontSize: 15,
-                      fontWeight: FontWeight.bold),
+                      fontWeight: FontWeight.bold
+                  ),
                 ),
                 Text(
                   '12 April 2021',
-                  style: TextStyle(
-                      color: const Color(0xff3B3B3B).withOpacity(0.3),
-                      fontSize: 16),
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(fontSize: 14),
                 ),
               ],
             ),

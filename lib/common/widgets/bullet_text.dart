@@ -11,15 +11,14 @@ class BulletWithText extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 30),
       child: Row(
         children: [
-          const Icon(
+           const Icon(
             Icons.circle,
-            color: Colors.black,
             size: 5,
           ),
           const SizedBox(
             width: 20,
           ),
-          Text(txt ?? "")
+          Text(txt ?? "",style: Theme.of(context).textTheme.bodyMedium,)
         ],
       ),
     );
